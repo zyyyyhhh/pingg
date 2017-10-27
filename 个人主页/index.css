@@ -1,0 +1,141 @@
+/*
+* @Author: dell
+* @Date:   2017-10-27 08:46:45
+* @Last Modified by:   dell
+* @Last Modified time: 2017-10-27 11:27:44
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: url('img/210955.jpg');
+	position: relative;
+}
+.box{
+	width: 150px;
+	height: 150px;	
+	position: absolute;
+	top: 20px;
+	left: 850px;
+	background: url('img/11.png') center/cover;
+}
+.box a{
+	display: block;
+	color: #000;
+	text-align: center;
+	line-height: 130px;
+	font-size: 18px;
+}
+.box1{
+	width: 150px;
+	height: 150px;	
+	position: absolute;
+	top: 10px;
+	left: 600px;
+	background: url('img/12.png') center/cover;
+}
+.box1 a{
+	display: block;
+	color: #000;
+	text-align: center;
+	line-height: 150px;
+	font-size: 22px;
+	font-weight: 600;
+}
+.box2{
+	width: 150px;
+	height: 150px;	
+	position: absolute;
+	top: 30px;
+	left: 250px;
+	background: url('img/13.png') no-repeat center/cover;
+	background-size: 180px 100px;
+}
+.box2 a{
+	display: block;
+	color: #000;
+	text-align: center;
+	line-height: 150px;
+	font-size: 22px;
+	font-weight: 600;
+}
+.box3{
+	width: 150px;
+	height: 150px;	
+	position: absolute;
+	top: 350px;
+	left: 1000px;
+	background: url('img/12.png') center/cover;
+}
+.box3 a{
+	display: block;
+	color: #000;
+	text-align: center;
+	line-height: 150px;
+	font-size: 22px;
+	font-weight: 600;
+}
+.big{
+	width: 200px;
+	height: 400px;
+	position: absolute;
+	top: 160px;
+	left: 280px;	
+}
+.big li{
+	width: 20px;
+	height: 40px;
+	overflow: hidden;
+	transition: all .7s;
+	border-radius: 5px;
+}
+.big li:nth-child(1){
+	background: #33f579;
+}
+.big li:nth-child(2){
+	background: #d73fe8;
+}
+.big li:nth-child(3){
+	background: #1196f7;
+}
+.big li:nth-child(4){
+	background: #f9ff00;
+}
+.big li:nth-child(5){
+	background: #ff0051;
+}
+.big li:nth-child(6){
+	background: #00ff5c;
+}
+.big li:nth-child(7){
+	background: #03a9f4;
+}
+.big li:nth-child(8){
+	background: #ff008b;
+}
+.big li:nth-child(9){
+	background:#09ef91;
+}
+.big li:nth-child(10){
+	background:#f97310;
+}
+.big li:nth-child(11){
+	background:#79ff17;
+}
+.big li a{
+	color: #000;
+	font-size: 22px;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 60px;
+}

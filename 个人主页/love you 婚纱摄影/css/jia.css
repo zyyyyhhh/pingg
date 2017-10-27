@@ -1,0 +1,144 @@
+/*
+* @Author: dell
+* @Date:   2017-10-03 14:44:20
+* @Last Modified by:   dell
+* @Last Modified time: 2017-10-03 21:37:14
+*/
+.pagemap{
+	font-size: 14px;
+	padding-left: 1100px;
+	margin-top: 10px;
+	line-height: 18px;
+	font-family: 宋体;
+	color: #717171;
+}
+.word{
+	width: 100%;
+	margin-top: 42px;
+	font-family: Verdana,"å¾®è½¯é›…é»‘";
+	overflow: hidden;
+}
+.word h2{
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 50px;
+	color: #5a5a5a;
+	float: left;
+	margin-left: 37%;
+	margin-right: 5px;
+}
+.word span{
+	font-size: 34px;
+    font-weight: bold;
+    color: #5a5a5a;
+    margin: 0 5px;
+    float: left;
+    line-height: 50px;
+    margin-right: 5px;
+}
+.word em{
+	font-size: 24px;
+	font-style: normal;
+    color: #5a5a5a;
+    margin: 0 5px;
+    float: left;
+    line-height: 50px;
+    color: #000;
+}
+.word h3{
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 50px;
+	color: #5a5a5a;
+	float: left;
+	margin-left: 28%;
+	margin-right: 5px;
+}
+.line{
+	width: 70px;
+	height: 2px;
+	background: #cbcbcb;
+	margin: 0 auto;
+}
+.us{
+	text-align: center;
+	color: #3c3c3c;
+	line-height: 18px;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.english{
+	width: 100%;
+	text-align: center;
+	line-height: 14px;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-family: Arial;
+	margin-top: 2px;	
+}
+.title{
+	width: 1200px;
+	height: 96px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.title h2{
+	direction: block;
+	width: 100%;
+	height: 68px;
+	font-weight: normal;
+	border-bottom: 1px solid #cecece;
+}
+.title h2 strong{
+	font-size: 44px;
+    font-family: Rockwell,arial;
+    line-height: 60px;
+    font-size: 44px;
+    text-align: left;
+}
+.title h2 strong i{
+	font-style: normal;
+	color: #7edab2;
+}
+.title h2 strong span{
+	font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+}
+.title h4{
+	display: block;
+	width: 1200px;
+	height: 28px;
+	margin-top: 10px;
+}
+.title h4 span{
+	float: left;
+    margin-right: 36px;
+    font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+    color: #818181; 
+}
+.title h4 i{
+	display: block;
+	color: #ff6700;
+	float: left;
+	margin-right: 8px;
+}
+.imgbox{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.imgbox1 p{
+	display: block;
+	margin-top: 10px;
+	
+}
+.imgbox1 p img{
+	display: block;
+   	margin-left: 80px;
+    max-width: 1200px;
+}

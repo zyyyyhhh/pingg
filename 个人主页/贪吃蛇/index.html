@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="index.js"></script>
+</head>
+
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.sence{
+		width: 600px;
+		height: 600px;
+		background: #333;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -300px;
+		margin-left: -300px;
+		border-bottom: 1px solid #333;
+		border-left: 1px solid #333;
+	}
+	.block{
+		width: 29px;
+		height: 29px;
+		float: left;
+		background: #fff;
+		border-top: 1px solid #333;
+		border-right: 1px solid #333;
+	}
+	.hot{
+		background: lightblue;
+	}
+
+</style>
+<body>
+	<div class="sence"></div>
+</body>
+</html>
+
+<script>
+	let snakes = new snake();
+	snakes.start();
+</script>
+

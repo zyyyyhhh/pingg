@@ -1,0 +1,57 @@
+/*
+* @Author: dell
+* @Date:   2017-09-26 16:08:02
+* @Last Modified by:   dell
+* @Last Modified time: 2017-09-26 19:40:04
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+main{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid #000;
+	background: #f7f3ee;
+}
+table{
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+.title{
+	font-size: 28px;
+	font-weight: 500;
+	text-align: center;
+}
+td{
+	border: 1px solid #000;
+	padding: 5px 25px;
+}
+tr{
+	border: 1px solid #000;
+}
+tr:nth-of-type(2n){
+	background: #f7f7f7;
+}
+th{
+	border: 1px solid #000;
+	font-weight: normal;
+}
+.del button{
+	padding: 6px 10px;
+	background: #cae2ac;
+	outline: none;
+	border: 0;
+	border-radius: 6px;
+}
+.add{
+	padding: 6px 10px;
+	background: #cae2ac;
+	outline: none;
+	border: 0;
+	margin-left: 640px;
+	margin-top: 10px;
+	border-radius: 6px;
+}

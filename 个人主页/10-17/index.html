@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.2.1.js"></script>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		overflow: hidden;
+		background: url('img/277422.jpg') center/cover;
+	}
+	.zhuozi{
+		width: 700px;
+		height: 600px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.poke{
+		width: 90px;
+		height: 140px;
+		position: absolute;
+		top: 0;
+		left: 300px;
+		background-position: center;
+		background-size: cover;
+		opacity: 0;
+	}
+	.active{
+		box-shadow: 0 0 0 2px lightblue;
+	}
+	.button{
+		width: 60px;
+		height: 20px;
+		background: lightblue;
+		border-radius: 4px;
+		position: absolute;
+		top: 500px;
+		left: 315px;
+		font-size: 12px;
+		line-height: 20px;
+		text-align: center;
+		color: #df2323;
+		cursor: pointer;
+	}
+	.btn{
+		width: 60px;
+		height: 20px;
+		background: lightblue;
+		border-radius: 4px;
+		position: absolute;
+		top: 540px;
+		left: 315px;
+		font-size: 12px;
+		line-height: 20px;
+		text-align: center;
+		color: #df2323;
+		cursor: pointer;
+	}
+</style>
+<body>
+	<div class="zhuozi">
+		<div class="btn">返回</div>
+	</div>
+	
+</body>
+</html>
+
+<script>
+	$(function(){
+		// 产生扑克
+		let color = ['c','d','h','s'];
+		let poke = [];
+		let flag = {};
+		for(let i=0;i<52;i++){
+			let hua = color[Math.floor(Math.random()*color.length)];
+			let num = Math.floor(Math.random()*13+1);
+			while(flag[`${hua}_${num}`]){
+				hua = color[Math.floor(Math.random()*color.length)];
+				num = Math.floor(Math.random()*13+1);
+			}
+			poke.push({hua,num});
+			flag[`${hua}_${num}`] = true;
+		}
+		
+		let index = 0;
+		for(let i=0;i<7;i++){
+			for(let j=0;j<=i;j++){
+				let left = 300-50*i+100*j,
+					top = 50*i;
+				$('<div>').addClass('poke box')
+					.attr('id',`${i}_${j}`)
+					.data('num',poke[index].num)
+					.css('background-image',`url(img1/${poke[index].num}${poke[index].hua}.jpg)`)
+					.appendTo('.zhuozi')
+					.delay(index*10).animate({left,top,opacity:1});
+				index++;
+			}
+		}
+
+		// 剩余牌
+		for(;index<poke.length;index++){
+			$('<div>').addClass('poke zuo')
+				.attr('id',`$(index)_$(index)`)
+				.data('num',poke[index].num)
+				.css('background-image',`url(img1/${poke[index].num}${poke[index].hua}.jpg)`)
+				.appendTo('.zhuozi')
+				.delay(index*10).animate({left:0,top:460,opacity:1});
+		} 
+
+		let first = null;
+		$('.zhuozi').on('click','.poke',function(e){
+			let element = $(e.target);
+			let ids = element.attr('id').split('_');
+			let ele1 = `#${ids[0]*1+1}_${ids[1]*1}`;
+			let ele2 = `#${ids[0]*1+1}_${ids[1]*1+1}`;
+			if($(ele1).length || $(ele2).length){
+				return;
+			}
+			element.toggleClass('active');
+			if(element.hasClass('active')){
+				element.animate({top:'-=20'});
+			}else{
+				element.animate({top:'+=20'});
+			}
+			if(!first){
+				first = $(e.target);
+			}else{
+				if(first.data('num') + element.data('num') == 14){
+					$('.active').animate({left:600,top:0,opacity:0},function(){
+						$(this).remove();
+					})
+				}else{
+					$('.active').animate({top:'+=20'},function(){
+						$(this).removeClass('active');
+					})
+				}
+				first = null;
+			}
+		})
+
+		let zIndex = 0;
+		$('<div>').addClass('button').text('发牌').appendTo('.zhuozi').click(function(){
+				if(!$('.zuo').length){return}
+				$('.zuo').eq(-1).css('zIndex',zIndex++).animate({left:600}).removeClass('zuo').addClass('you');
+			})
+
+		$('.btn').on('click',function(){
+			if(!$('.you').length){return}
+				$('.you').each(function(index){
+					$(this).delay(index*100).css('zIndex',zIndex++).animate({left:0}).removeClass('you').addClass('zuo');
+				})
+		})
+	})
+</script>

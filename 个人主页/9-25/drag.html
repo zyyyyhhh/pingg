@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>drag</title>
+	<script src="js/drag.js"></script>
+	<script src="js/drag  obj.js"></script>
+</head>
+
+<style>
+	
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		background: #ff6700;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.son{
+		width: 200px;
+		height: 200px;
+		background: #ff6700;
+		position: absolute;
+		top: 210px;
+		left: 210px;
+	}
+</style>
+<body>
+	<div class="box"></div>
+	<div class="son"></div>
+	
+</body>
+</html>
+
+<script>
+	let box = document.querySelector('div.box');
+	let son = document.querySelector('div.son');
+	let drag = new Drag(box); 
+	let drag1 = new Drag(son); 
+	drag.move();
+	drag1.move();
+
+
+
+</script>

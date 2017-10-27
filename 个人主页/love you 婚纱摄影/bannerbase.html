@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/animate.js"></script>
+</head>
+<body>
+
+<style>
+	*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.header{
+	width: 1200px;
+	height: 98px;
+	background: rgba(255, 255, 255, .8);
+	position: absolute;
+	top: 42px;
+	left: 50%;
+	margin-left: -600px;
+	border-radius: 5px;
+	z-index: 999;
+}
+.logo{
+	width: 162px;
+	height: 68px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 15px;
+}
+.loga img{
+	width: 162px;
+	height: 68px;
+}
+.items{
+	width: 104px;
+	height: 0;
+	background: #fff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	top: 98px;
+	left: 8px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.items a{
+	display: block;
+	text-decoration: none;
+	font-size: 12px;
+	color: #383b4a;
+	line-height: 35px;
+	text-align: center;
+}
+.items a:hover{
+	color: #ef4423;
+}
+.lis{
+	width: 928px;
+	height: 100%;
+	float: left;
+	margin-left: 35px;
+	display: flex;
+	justify-content: space-around;
+}
+.lis li{
+	width: 115px;
+	height: 98px;
+	cursor: pointer;
+	position: relative;
+}
+.lis li span{
+	display: block;
+	font-size: 14px;
+	line-height: 98px;
+	text-align: center;
+	color: #383b4a;
+	font-weight: bold;
+	position: relative;
+}
+.lis li i{
+	display: block;
+	font-size: 14px;
+	position: absolute;
+	top: 40px;
+	left: 28%;
+	font-style: normal;
+	color: #ef4423;
+	font-weight: 600;
+}
+.banner{
+	width: 100%;
+	height: 650px;
+	overflow: hidden;
+}
+.imgbox{
+	width: 1920px;
+	height: 650px;
+	position: relative;
+}
+.imgbox li{
+	width: 100%;
+	height: 650px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.imgbox li a img{
+	display: block;
+	margin-left:-280px; 
+	width: 100%;
+	height: 100%;
+}
+.block{
+	width: 105px;	
+	padding: 9px;
+	background: rgba(0, 0, 0, .8);
+	position: absolute;
+	top: 600px;
+	left: 50%;
+	margin-left: -52px;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 3px;
+}
+.block span{
+	display: block;
+	width: 15px;
+	height: 5px;
+	background: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+</style>
+<div class="header">
+		<div class="logo">
+			<img src="img/logo.png" alt="">
+		</div>
+		<div class="lis">
+			<li>
+				<span>home</span>
+			</li>
+			<li>
+				<span class="yiru">关于我们</span>
+				<i style="display: none;">ABOUT</i>
+				<dl class="items">
+					<dd><a href="">客户分享</a></dd>
+					<dd><a href="">礼服展示</a></dd>
+					<dd><a href="">微电影</a></dd>
+				</dl>
+			</li>
+			<li>
+				<span class="yiru">作品展示</span>
+				<i style="display: none;">SHOW CASE</i>
+				<dl class="items">
+					<dd><a href="">内景</a></dd>
+					<dd><a href="">外景</a></dd>
+					<dd><a href="">主题</a></dd>
+				</dl>
+			</li>
+			<li>
+				<span>客片欣赏</span>
+				<i style="display: none;">LOVE SHOW</i>
+			</li>
+			<li>
+				<span class="yiru">新闻中心</span>
+				<i style="display: none;">NEWS</i>
+				<dl class="items">
+					<dd><a href="">流行趋势</a></dd>
+					<dd><a href="">服务贴士</a></dd>
+					<dd><a href="">新动态</a></dd>
+				</dl>
+			</li>
+			<li>
+				<span>服务报价</span>
+				<i style="display: none;">SERVICE</i>
+			</li>
+			<li>
+				<span>联系我们</span>
+				<i style="display: none;">CONTACT</i>
+			</li>
+			<li>
+				<span>在线订单</span>
+				<i style="display: none;">ORDERS</i>
+			</li>
+		</div>
+	</div>
+	<div class="banner">
+		<ul class="imgbox">
+			<li>
+				<a href="banner.html">
+					<img src="img1/20171015152046-831b.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="banner.html">
+					<img src="img/201709070000000001.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="banner.html">
+					<img src="img/201708300000000001.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="banner.html">
+					<img src="img/201709070000000001.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="banner.html">
+					<img src="img/201708300000000001.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+		<div class="block">
+			<span style="background: yellow;"></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+<script>
+	
+	window.onload = function(){
+	let span = document.querySelectorAll('.lis>li>.yiru');
+	let items = document.querySelectorAll('.lis>li>.items');
+	let banner = document.querySelector('.banner');
+	let imgbox = document.querySelector('.imgbox');
+	let lis = imgbox.querySelectorAll('li');
+	let yuan = document.querySelectorAll('.block>span');
+	console.log(yuan);
+	let flag = true;
+
+	for(let i=0;i<span.length;i++){
+		span[i].onmouseover = function(){
+			items[i].style.height = `${120}px`;
+		}
+		span[i].onmouseout = function(){
+			items[i].style.height = `${0}px`;
+		}
+		items[i].onmouseover = function(){
+			items[i].style.height = `${120}px`;
+		}
+		items[i].onmouseout = function(){
+			items[i].style.height = `${0}px`;
+		}
+	}
+
+	for(let i=0;i<yuan.length;i++){
+		yuan[i].onmouseover = function(){
+			for(let j=0;j<lis.length;j++){
+				animate(lis[j],{opacity:0});
+				yuan[j].style.background = 'white';
+			}
+			animate(lis[i],{opacity:1});
+			yuan[i].style.background = 'yellow';
+			num = i;
+		}
+	}
+
+
+	let t = setInterval(move, 3000);
+	let num = 0;
+	function move(){
+		num++;
+		if(num == yuan.length){
+			num = 0;
+		}
+		for(let j=0;j<yuan.length;j++){
+			animate(lis[j],{opacity:0});
+				yuan[j].style.background = 'white';
+		}
+		animate(lis[num],{opacity:1})
+			yuan[num].style.background = 'yellow';
+	}
+
+	banner.onmouseover = function(){
+		clearInterval(t);
+	}
+	banner.onmouseout = function(){
+		t = setInterval(move,3000);
+	}
+}
+</script>

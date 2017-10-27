@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打字游戏</title>
+	<script src="js/index.js"></script>
+	<style>
+	    *{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    body,html{
+	    	width: 100%;
+	    	height: 100%;
+	    }
+	    body{
+	    	background: url('img/202503.jpg');
+	    	overflow: hidden;
+	    }
+		.char{
+			width: 60px;
+			height: 60px;
+			border-radius: 26px;
+			background: #32fb71;
+			font-size: 20px;
+			color: #fff;
+			text-align: center;
+			line-height: 60px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		window.onload=function(){
+			let game=new Game();
+	        game.start();
+		}
+	</script>
+</body>
+</html>

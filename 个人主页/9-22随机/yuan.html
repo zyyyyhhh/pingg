@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.pointer{
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	.circle{
+		width: 15px;
+		height: 15px;
+		background: pink;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all ease 1s;
+	}
+</style>
+<body>
+	<div class="pointer"></div>
+	<!-- <div class="circle"></div> -->
+	
+</body>
+</html>
+
+<script>
+	let pointer = document.querySelector('div.pointer');
+	circle(250,45);
+	function circle(r,num){
+		let deg = 360/num;
+		for(let i=0;i<num;i++){
+			let divs = document.createElement('div');
+			divs.className = 'circle';
+			let rad = deg*i*Math.PI/180;
+			let lefts = r*Math.cos(rad);
+			let tops = r*Math.sin(rad);
+
+			pointer.appendChild(divs);
+			divs.style.background = color();
+			setTimeout(function(){
+				divs.style.transitionDelay = `${i*200}ms`;
+				
+				divs.style.left = lefts+'px';
+				divs.style.top = tops+'px';
+			},100);
+		}
+	}
+
+	function color(){
+		let str = 'rgb(';
+		for(let i=0;i<3;i++){
+			let num = Math.floor(Math.random()*256);
+			str+=num+',';
+		}
+		str = str.slice(0,-1)+')';
+		return str;
+	}
+
+
+
+</script>

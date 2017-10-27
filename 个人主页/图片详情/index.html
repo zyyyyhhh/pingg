@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="font_443081_iy1bztmphmy4x6r/iconfont.css">
+	<script src="jquery-3.2.1.js"></script>
+</head>
+
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	ul{
+		width: 660px;
+		height: 620px;
+		background: yellow;	
+		margin: 0 auto;
+	}
+	li{
+		width: 220px;
+		height: 310px;
+		background: red;
+		float: left;
+	}
+	li>img{
+		width: 220px;
+		height: 310px;
+	}
+	.mask{
+		width: 390px;
+		height: 600px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		box-shadow: 0 0 0 1000px rgba(0, 0, 0, .9);
+		transform: scale(0, 0);
+	}
+	.mask>img{
+		position: 
+	}
+	.close i{
+		position: absolute;
+		top: -8px;
+		right: -420px;
+		cursor: pointer;
+	}
+	.btnL{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: calc(50% - 15px);
+		right: -150px;
+		cursor: pointer;
+	}
+	.btnR{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: calc(50% - 15px);
+		left: -150px;
+		cursor: pointer;
+	}
+	.active{
+		transform: scale(1, 1);
+		transition: all 0.5s;
+	}
+	.last{
+		width: 200px;
+		height: 30px;
+		background: #ccc;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 14px;
+		line-height: 30px;
+		text-align: center;
+		display: none;
+	}
+
+
+
+
+
+</style>
+<body>
+
+	<ul>
+		<li><img src="img/cjys_05.jpg" alt=""></li>
+		<li><img src="img/cjys_06.jpg" alt=""></li>
+		<li><img src="img/cjys_07.jpg" alt=""></li>
+		<li><img src="img/cjys_08.jpg" alt=""></li>
+		<li><img src="img/cjys_13.jpg" alt=""></li>
+		<li><img src="img/cjys_14.jpg" alt=""></li>
+	</ul>
+	<div class="mask">
+		<img src="img/cjys_05.jpg" alt="">
+		<div class="close">
+			<i class="iconfont icon-wrong-2"></i>
+		</div>
+		<div class="btnL">
+			<i class="iconfont icon-zuoyoujiantou-copy-copy-copy-copy"></i>
+		</div>
+		<div class="btnR">
+			<i class="iconfont icon-icon-right"></i>
+		</div>
+		<div class="last">此照片已经是最后一张！</div>
+	</div>
+	
+</body>
+</html>
+
+<script>
+	
+	$(function(){
+		let lis = $('ul>li');
+		let mask = $('div.mask');
+		let close = $('div.close');
+		let mimg = $('img',mask);
+		let btnL = $('div.btnL');
+		let btnR = $('div.btnR');
+		let index;
+
+		lis.on('click',function(){
+			index = $(this).index();
+			$(this).find('img');
+			let src = $('img',this).attr('src');
+			mimg.attr('src',src);
+			mask.addClass('active');
+			$('div.last').css('display','none');
+
+		})
+
+		close.on('click',function(){
+			mask.removeClass('active');
+			$('div.last').css('display','none');
+
+		})
+
+
+		btnL.on('click',function(){
+			index++;
+			if(index>lis.length-1){
+				index = lis.length-1;
+				$('div.last').css('display','block');
+				return;
+			}
+			let src = lis.eq(index).find('img').attr('src');
+			mimg.attr('src',src);
+		})
+
+
+		btnR.on('click',function(){
+			index--;
+			if(index<0){
+				index = 0;
+				return;
+			}
+			let src = lis.eq(index).find('img').attr('src');
+			mimg.attr('src',src);
+		})
+
+
+	})
+</script>

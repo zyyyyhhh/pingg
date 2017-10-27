@@ -1,0 +1,165 @@
+/*
+* @Author: dell
+* @Date:   2017-10-08 16:54:18
+* @Last Modified by:   dell
+* @Last Modified time: 2017-10-08 17:29:40
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.pagemap{
+	font-size: 14px;
+	padding-left: 1100px;
+	margin-top: 10px;
+	line-height: 18px;
+	font-family: 宋体;
+	color: #717171;
+}
+.word{
+	width: 100%;
+	margin-top: 42px;
+	font-family: Verdana,"å¾®è½¯é›…é»‘";
+	overflow: hidden;
+}
+.word h2{
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 50px;
+	color: #5a5a5a;
+	float: left;
+	margin-left: 37%;
+	margin-right: 5px;
+}
+.word span{
+	font-size: 34px;
+    font-weight: bold;
+    color: #5a5a5a;
+    margin: 0 5px;
+    float: left;
+    line-height: 50px;
+    margin-right: 5px;
+}
+.word em{
+	font-size: 24px;
+	font-style: normal;
+    color: #5a5a5a;
+    margin: 0 5px;
+    float: left;
+    line-height: 50px;
+    color: #000;
+}
+.word h3{
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 50px;
+	color: #5a5a5a;
+	float: left;
+	margin-left: 28%;
+	margin-right: 5px;
+}
+.line{
+	width: 70px;
+	height: 2px;
+	background: #cbcbcb;
+	margin: 0 auto;
+}
+.us{
+	text-align: center;
+	color: #3c3c3c;
+	line-height: 18px;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.english{
+	width: 100%;
+	text-align: center;
+	line-height: 14px;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-family: Arial;
+	margin-top: 2px;	
+}
+.photo{
+	width: 1200px;
+	height: 130px;
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+}
+.photo .img1{
+	margin-bottom: 75px;
+}
+.yingwen{
+	width: 1200px;
+	height: 51px;
+	margin: 0 auto;
+	text-align: center;
+}
+.show{
+	width: 1200px;
+	height: 360px;
+	margin: 30px auto 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border-bottom: 1px dashed #000;
+}
+.show li{
+	width: 239px;
+	height: 335px;
+	position: relative;
+}
+.show li a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.zhe{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.zhe span{
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 12px;
+}
+.yuan{
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin: 0 auto;
+	margin-top: 70px;
+	transition: all 0.5s;
+}
+.yuan i{
+	display: block;
+	font-size: 35px;
+	color: #fff;
+	margin-top: 20px;
+	margin-left: 45px;
+}
+.yuan span{
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+.show li:hover .zhe{
+	opacity: 1;
+}
+.show li:hover .yuan{
+	transform: rotate(360deg);
+}

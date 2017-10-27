@@ -1,0 +1,69 @@
+/*
+* @Author: dell
+* @Date:   2017-10-24 16:07:28
+* @Last Modified by:   dell
+* @Last Modified time: 2017-10-24 18:07:10
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background: url('../img/311656.jpg') center/cover;
+}
+h3{
+	text-align: center;
+}
+form{
+	width: 250px;
+	height: 180px;
+	border-radius: 8px;
+	background: rgba(247, 145, 94, 1);
+	margin: 0 auto;
+	margin-top: 190px;
+	padding: 10px 20px 10px 30px;
+}
+label{
+	font-size: 16px;
+}
+input{
+	width: 150px;
+	height: 30px;
+	border: none;
+	margin-left: 15px;
+	padding-left: 10px;
+	border-radius: 10px;
+}
+input:focus{
+	outline: none;
+}
+.formGround{
+	margin-top: 20px;
+}
+.formGround1>input{
+	margin-top: 20px;
+	margin-left: 16px;
+}
+button{
+	display: block;
+	width: 221px;
+	height: 30px;
+	background: #f9d139;
+	border: none;
+	margin: 0 auto;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+}
+button:focus{
+	outline: none;
+}
